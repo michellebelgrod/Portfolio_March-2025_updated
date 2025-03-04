@@ -1,0 +1,209 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Plain';
+    font-weight: normal;
+    font-style: normal;
+    src: url('assets/Plain-Regular.woff') format('woff');
+    text-shadow: none;
+}
+
+/* Body Styles */
+body {
+    background-color: black;
+    color: black;
+    font-family: 'Plain', sans-serif;
+    font-weight: normal;
+    font-size: 25pt;
+    line-height: 1.2;
+    letter-spacing: -1;
+    overflow: hidden; /* Disable scrolling */
+    cursor: none !important;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    padding: 13px 20px 0;
+    gap: 20px;
+    font-size: 25pt;
+    line-height: 1.2;
+    font-weight: normal;
+    color: white;
+    box-sizing: border-box;
+    text-wrap: balance;
+	cursor: auto !important;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-family: 'Plain', sans-serif;
+    font-weight: normal;
+}
+
+nav a:hover {
+    opacity: 50%;
+    text-decoration: none;
+}
+
+/* Project Title */
+.project-title {
+    position: fixed;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+    font-size: 25pt;
+    color: white;
+    z-index: 1000;
+}
+
+/* Background Container */
+.background-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Image and Video Overlay */
+.image-video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 20px;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+
+/* Ensure both video and image in the overlay scale properly */
+.overlay-video,
+.image-video-overlay img {
+    width: 80%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    visibility: visible;
+}
+
+/* Make sure to reset any other conflicting properties that might hide the video */
+.overlay-video.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+/* Directional Zones */
+.left,
+.right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+/* Custom Cursor */
+.cursor {
+    position: absolute;
+    width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    user-select: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.left:hover,
+.right:hover {
+    cursor: none; /* Hide default cursor */
+}
+
+.about-icon {
+    display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .background-container {
+        height: calc(100vw * 0.72);
+        width: calc(100% - 30px);
+        margin: 0;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .image-video-overlay {
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay-video,
+    .image-video-overlay img {
+        width: 80%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    nav {
+        font-size: 25pt;
+    }
+
+    .project-title {
+        font-size: 25pt;
+    }
+    
+    .about-text {
+        display: none;
+    }
+    
+    .about-icon {
+        display: inline;
+    }
+}

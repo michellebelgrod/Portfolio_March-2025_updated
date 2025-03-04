@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Plain';
+    font-weight: normal;
+    font-style: normal;
+    src: url('Plain-Regular.woff') format('woff');
+    text-shadow: none;
+}
+
+/* Body Styles */
+body {
+    color: black;
+    font-family: 'Plain', sans-serif;
+    font-weight: normal;
+    font-size: 25pt;
+    line-height: 1.2;
+    letter-spacing: -1;
+    text-wrap: balance;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    opacity: 50%;
+}
+
+/* About Page */
+.about-page {
+    display: grid;
+    grid-template-columns: 3fr 7fr 2fr;
+    width: 100%;
+    padding: 12px 20px;
+    gap: 20px;
+    min-height: 100dvh;
+}
+.about-page-social {
+    display: flex;
+    flex-direction: column;
+}
+.about-page-social-desktop {
+
+}
+.about-page-social-mobile {
+    display: none;
+}
+
+
+.A2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.A3 {
+    display: flex;
+}
+
+.B1 {
+    padding-bottom: 1.2em;
+}
+
+/* B2 row inside A2 */
+.B2 {
+    display: flex;
+    width: 100%;
+}
+
+.C1 {
+    flex: 4; /* 4/7 columns */
+    padding-right: 15px;
+}
+
+.C2 {
+    flex: 3; /* 3/7 columns */
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+    .B2 {
+        flex-direction: column;
+        /* margin-bottom: 1.2em;  */
+    }
+    .C1 {
+        padding-right: 0;
+        margin-bottom: 1.2em; 
+    }
+    .about-page {
+        grid-template-columns: 1fr;
+    }
+    .about-page-social-desktop {
+        display: none;
+    }
+    .about-page-social-mobile {
+        display: flex;
+        margin-top: .7em;
+    }
+}
+
+/* Close Button */
+.close-btn {
+    /* z-index: 1000; */
+    /* padding-top: 15pt; */
+    /* padding-right: 9pt; */
+    width: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.close-btn:hover {
+    opacity: 50%;
+}
