@@ -20,7 +20,7 @@ body {
     color: black;
     font-family: 'Plain', sans-serif;
     font-weight: normal;
-    font-size: 23pt;
+    font-size: 25pt;
     line-height: 1.2;
     letter-spacing: -1;
     overflow: hidden; /* Disable scrolling */
@@ -40,7 +40,7 @@ nav {
     width: 100%;
     padding: 13px 20px 0;
     gap: 20px;
-    font-size: 23pt;
+    font-size: 25pt;
     line-height: 1.2;
     font-weight: normal;
     color: white;
@@ -68,7 +68,7 @@ nav a:hover {
     bottom: 15px;
     left: 20px;
     right: 20px;
-    font-size: 23pt;
+    font-size: 25pt;
     color: white;
     z-index: 1000;
 }

@@ -19,7 +19,7 @@ body {
     color: black;
     font-family: 'Plain', sans-serif;
     font-weight: normal;
-    font-size: 23pt;
+    font-size: 25pt;
     line-height: 1.2;
     letter-spacing: -1;
     text-wrap: balance;
@@ -28,7 +28,7 @@ body {
 p {
     font-family: 'Plain', sans-serif;
     font-weight: normal;
-    font-size: 23pt;
+    font-size: 25pt;
     line-height: 1.2;
     letter-spacing: -1;
     text-wrap: balance;
@@ -92,8 +92,27 @@ a:hover {
     flex: 3; /* 3/7 columns */
 }
 
+/* Close Button */
+.close-btn {
+    /* z-index: 1000; */
+    /* padding-top: 15pt; */
+    /* padding-right: 9pt; */
+    width: 25px;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+
+.close-btn:hover {
+    opacity: 50%;
+}
+
+
 /* Mobile layout adjustments */
 @media (max-width: 768px) {
+    p {
+        font-size: 20pt;
+    }
     .B2 {
         flex-direction: column;
         /* margin-bottom: 1.2em;  */
@@ -101,6 +120,9 @@ a:hover {
     .C1 {
         padding-right: 0;
         margin-bottom: 1.2em; 
+    }
+    .A3 {
+        font-size: 20pt;
     }
     .about-page {
         grid-template-columns: 1fr;
@@ -112,19 +134,9 @@ a:hover {
         display: flex;
         margin-top: .7em;
     }
+    .close-btn {
+        width: 20px;
+        top: 7px;
+    }
 }
 
-/* Close Button */
-.close-btn {
-    /* z-index: 1000; */
-    /* padding-top: 15pt; */
-    /* padding-right: 9pt; */
-    width: 38px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.close-btn:hover {
-    opacity: 50%;
-}
