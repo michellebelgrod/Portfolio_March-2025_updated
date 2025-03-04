@@ -192,11 +192,11 @@ nav a:hover {
     }
 
     nav {
-        font-size: 23pt;
+        font-size: 20pt;
     }
 
     .project-title {
-        font-size: 23pt;
+        font-size: 20pt;
     }
     
     .about-text {
@@ -205,5 +205,8 @@ nav a:hover {
     
     .about-icon {
         display: inline;
+    }
+    .cursor {
+        width: 43px;
     }
 }
