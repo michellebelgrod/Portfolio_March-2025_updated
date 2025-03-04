@@ -25,6 +25,15 @@ body {
     text-wrap: balance;
 }
 
+p {
+    font-family: 'Plain', sans-serif;
+    font-weight: normal;
+    font-size: 23pt;
+    line-height: 1.2;
+    letter-spacing: -1;
+    text-wrap: balance;
+}
+
 a {
     text-decoration: none;
     color: black;
