@@ -178,6 +178,10 @@ nav a:hover {
         background-size: cover;
     }
 
+    .background-video {
+        object-fit: cover;  /* Ensure the video fills the container */
+    }
+
     .image-video-overlay {
         width: 100%;
         height: auto;
