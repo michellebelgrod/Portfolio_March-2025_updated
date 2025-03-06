@@ -75,17 +75,16 @@ nav a:hover {
 
 /* Background Container */
 .background-container {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
     background-size: cover;
     background-position: center;
-    transform: translate(-50%, -50%);
     z-index: 1;
 }
-
 
 .background-video {
     position: absolute;
@@ -137,8 +136,7 @@ nav a:hover {
     top: 0;
     width: 50%;
     height: 100%;
-    z-index: 10000;
-    pointer-events: auto !important;
+    z-index: 10;
 }
 
 .left {
@@ -158,9 +156,8 @@ nav a:hover {
     pointer-events: none;
     user-select: none;
     transform: translate(-50%, -50%);
-    z-index: 99999;
+    z-index: 9999;
 }
-
 
 .left:hover,
 .right:hover {
@@ -181,10 +178,6 @@ nav a:hover {
         background-size: cover;
     }
 
-    .left, .right {
-        z-index: 10000; /* Ensure the navigation links are above the video */
-    }
-
     .image-video-overlay {
         width: 100%;
         height: auto;
@@ -196,10 +189,6 @@ nav a:hover {
         height: auto;
         max-height: 100%;
         object-fit: contain;
-    }
-
-    .background-video {
-        object-fit: cover;
     }
 
     nav {
