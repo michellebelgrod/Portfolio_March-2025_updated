@@ -191,6 +191,10 @@ nav a:hover {
         object-fit: contain;
     }
 
+    .background-video {
+        object-fit: cover;
+    }
+
     nav {
         font-size: 20pt;
     }
