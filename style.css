@@ -109,7 +109,7 @@ nav a:hover {
     overflow: hidden;
     padding: 0 20px;
     transform: translate(-50%, -50%);
-    z-index: 200;
+    z-index: 2;
 }
 
 /* Ensure both video and image in the overlay scale properly */
