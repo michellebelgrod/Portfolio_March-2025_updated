@@ -6,13 +6,15 @@
 }
 
 /* Fonts */
-@font-face {
-    font-family: 'Plain';
-    font-weight: normal;
-    font-style: normal;
-    src: url('assets/Plain-Regular.woff') format('woff');
-    text-shadow: none;
-}
+  @font-face {
+  font-family: 'Plain';
+  src: url('assets/Plain-Regular.eot');
+  src: url('assets/Plain-Regular.eot?#iefix') format('embedded-opentype'),
+       url('assets/Plain-Regular.woff2') format('woff2'),
+       url('assets/Plain-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  }
 
 /* Body Styles */
 body {
